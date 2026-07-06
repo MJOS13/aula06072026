@@ -47,6 +47,8 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-    # Runs a single command using the runners shell
-    - name: Send greeting
-      run: echo "Hello ${{ inputs.name }}"
+      - run: |
+          python --versio
+          ls -all  
+          echo "print('Ola')" > hello.py
+          python hello.py
