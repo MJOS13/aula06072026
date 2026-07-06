@@ -39,4 +39,4 @@ jobs:
     steps:
     # Runs a single command using the runners shell
     - name: Criar pasta
-      run: "Hello ${{ inputs.name }}-${{ inputs.ambiente }}"
+      run: mkdir "${{ inputs.name }}-${{ inputs.ambiente }}"
