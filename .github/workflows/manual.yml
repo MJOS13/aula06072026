@@ -46,4 +46,4 @@ jobs:
         python --version
         ls -all
         echo "print("Hello")" > hello.py
-        phyton hello.py
+        python hello.py
