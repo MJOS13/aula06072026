@@ -8,7 +8,7 @@ on:
   workflow_dispatch:
     # Inputs the workflow accepts.
     inputs:
-      nome_:
+      nome_pasta:
         # Friendly description to be shown in the UI instead of 'name'
         description: 'Nome da pasta'
         # Default value if no value is explicitly provided
@@ -47,10 +47,11 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      - run: |
-          python --versio
-          ls -all  
-          echo "print('Ola')" > hello.py
-          python hello.py
-          mkdir Pynux
+    -  name: whatever
+    run |
+      mkdir "${{inputs.nome_pasta}}"
+       cd "${{inputs.nome_pasta}}"
+       echo "print ${{inputs.mensagem}}" > ${{inputs.nome_ficheiro}}
+       python ${{inputs.nome_ficheiro}}
+    
           
