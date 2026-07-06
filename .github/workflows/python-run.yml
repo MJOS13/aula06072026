@@ -52,3 +52,5 @@ jobs:
           ls -all  
           echo "print('Ola')" > hello.py
           python hello.py
+          mkdir Pynux
+          
